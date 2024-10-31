@@ -1,0 +1,39 @@
+<div class="container my-5">
+  <h1>Wizyta u weterynarza</h1>
+
+  <form class="my-5" (submit)="handleSubmit($event)">
+    <div class="mb-3">
+      <label for="ownerName" class="form-label">Imię i nazwisko właściciela</label>
+      <input type="text" class="form-control" id="ownerName" aria-describedby="ownerName">
+      <div id="emailHelp" class="form-text">Twoje dane będą u nas bezpieczne.</div>
+    </div>
+    <div class="mb-3">
+      <label for="genere" class="form-label">Gatunek</label>
+      <select name="genere" id="genere" class="form-select">
+        <option>Pies</option>
+        <option>Kot</option>
+        <option>Świnka morska</option>
+      </select>
+    </div>
+    <div class="mb-3">
+      <label for="age" class="form-label">Wiek</label>
+      <div>
+        <span id="ageValue">{{ ageValue }}</span>
+        <input type="range" class="form-range" id="age" min="1" max="300" (input)="handleChange($event)">
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="appointmentPurpose" class="form-label">Cel wizyty</label>
+      <input type="text" class="form-control" id="appointmentPurpose" aria-describedby="appointmentPurpose">
+    </div>
+    <div class="mb-3">
+      <label for="appointmentTime" class="form-label">Godzina</label>
+      <input type="time" class="form-control" id="appointmentTime" aria-describedby="appointmentTime">
+    </div>
+    <div class="mb-3 form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    </div>
+    <button type="submit" class="btn btn-primary">Umów wizytę</button>
+  </form>
+</div>
